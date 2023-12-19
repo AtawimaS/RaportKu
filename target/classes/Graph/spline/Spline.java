@@ -1,4 +1,4 @@
-package raven.spline;
+package Graph.spline;
 
 import java.util.ArrayList;
 import java.util.List;

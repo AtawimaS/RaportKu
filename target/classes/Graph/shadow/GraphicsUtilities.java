@@ -1,4 +1,4 @@
-package raven.shadow;
+package Graph.shadow;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;

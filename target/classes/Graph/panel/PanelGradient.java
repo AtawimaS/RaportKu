@@ -1,4 +1,4 @@
-package raven.panel;
+package Graph.panel;
 
 import java.awt.Color;
 import java.awt.GradientPaint;

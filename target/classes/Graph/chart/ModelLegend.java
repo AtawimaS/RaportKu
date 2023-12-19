@@ -1,4 +1,4 @@
-package raven.chart;
+package Graph.chart;
 
 import java.awt.Color;
 

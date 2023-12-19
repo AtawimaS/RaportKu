@@ -1,4 +1,4 @@
-package raven.chart;
+package Graph.chart;
 
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
@@ -24,10 +24,10 @@ import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
 import org.jdesktop.animation.timing.interpolation.PropertySetter;
-import raven.chart.blankchart.BlankPlotChart;
-import raven.chart.blankchart.BlankPlotChatRender;
-import raven.spline.Spline;
-import raven.spline.SplinePoint;
+import Graph.chart.blankchart.BlankPlotChart;
+import Graph.chart.blankchart.BlankPlotChatRender;
+import Graph.spline.Spline;
+import Graph.spline.SplinePoint;
 
 public class CurveLineChart extends JComponent {
 
@@ -444,4 +444,8 @@ public class CurveLineChart extends JComponent {
     private BlankPlotChart blankPlotChart;
     private JPanel panelLegend;
     private JLabel labelTitle;
+
+    public void addData(String semester, String matematika, String ipa, String ips, String bin, String big) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

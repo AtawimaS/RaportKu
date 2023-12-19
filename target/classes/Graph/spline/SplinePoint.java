@@ -1,4 +1,4 @@
-package raven.spline;
+package Graph.spline;
 
 public class SplinePoint {
 

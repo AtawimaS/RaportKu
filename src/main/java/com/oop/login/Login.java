@@ -4,9 +4,12 @@
  */
 package com.oop.login;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.File;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import com.oop.dashboard.Dashboard1;
+import com.oop.dashboard.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -274,8 +277,30 @@ public class Login extends javax.swing.JFrame {
             ResultSet rs = stm.executeQuery(sql);
             
             if (!username.isEmpty() && password.length() > 0 ) {
+                if (rs.next()) {
+                        Dashboard1 pindah = new Dashboard1();
+                        pindah.setVisible(true);
+                        this.setVisible(false);
+                        this.dispose();
+                }
+            }
+            
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+       try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/rapotku","root","");
+            
+            Statement stm = con.createStatement();
+            
+            String sql = "select * from datasiswa where nama_siswa='"+username+"' and id_siswa='"+password+"'";
+            ResultSet rs = stm.executeQuery(sql);
+            
+            if (!username.isEmpty() && password.length() > 0 ) {
                 if(rs.next()){
-                    Dashboard1 pindah = new Dashboard1();
+                    writePasswordToNIMFile(password);
+                    Dashboard_Siswa pindah = new Dashboard_Siswa();
                     pindah.show();
                     this.setVisible(false);
                     disposesmooth();
@@ -294,6 +319,24 @@ public class Login extends javax.swing.JFrame {
     private void menuButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuButton1ActionPerformed
+
+    private void writePasswordToNIMFile(String password) {
+    try {
+        File file = new File("nim.txt");
+        if (!file.exists()) {
+            if (file.createNewFile()) {
+                System.out.println("File 'nim.txt' berhasil dibuat.");
+            } else {
+                System.out.println("Gagal membuat file 'nim.txt'.");
+            }
+        }
+        FileWriter writer = new FileWriter(file);
+        writer.write(password);
+        writer.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
 
     /**
      * @param args the command line arguments
