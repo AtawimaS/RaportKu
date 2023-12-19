@@ -28,7 +28,7 @@ public class NavigateBarIcon extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/rsz_1navigatebar.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/rsz_658185298bd0d.png"))); // NOI18N
         //jLabel1.setIcon(new javax.swing.ImageIcon("/icon/rsz_1navigatebar.png"));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

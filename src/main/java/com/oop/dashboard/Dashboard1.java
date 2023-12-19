@@ -20,6 +20,10 @@ import javax.swing.BorderFactory;
 import javax.swing.Timer;
 import javax.swing.border.Border;
 
+
+import java.io.File;  
+import java.io.FileWriter;
+import java.io.IOException;
 /**
  *
  * @author Will
@@ -28,10 +32,12 @@ public class Dashboard1 extends javax.swing.JFrame {
     int open=0,open1=0;
     int x,y;
     String smtr;
+    UpdatePanel updatePanel = new UpdatePanel();
 //    jTabbedPane1.setSelectedIndex(0);
     private NavigateSemester NavigateSemester;
     public Dashboard1() {
         initComponents();
+        createSemester();
         
     }
     
@@ -41,9 +47,9 @@ public class Dashboard1 extends javax.swing.JFrame {
             @Override
             public void run(){
                 try{
-                    for(int i = 500;i>=0;i--){
+                    for(int i = 124;i>=0;i--){
                         Thread.sleep(0,5);
-                        navigateSemester1.setSize(124,i);
+                        navigateSemester1.setSize(i,500);
                     }
                 }catch(Exception e){
                     JOptionPane.showMessageDialog(null, e);
@@ -76,6 +82,31 @@ public class Dashboard1 extends javax.swing.JFrame {
         shadowEdit.setOpaque(false);
         shadowView.setOpaque(false);
     }
+    private void createSemester(){
+        try {
+            File myObj = new File("semester.txt");
+            if (myObj.createNewFile()) {
+              System.out.println("File created: " + myObj.getName());
+            } else {
+              System.out.println("File already exists.");
+            }
+          } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+          }
+    }
+    
+    private void writeSemester(String semester){
+        try {
+            FileWriter myWriter = new FileWriter("semester.txt");
+            myWriter.write(semester);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+          } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+          }
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -83,17 +114,14 @@ public class Dashboard1 extends javax.swing.JFrame {
         paneMoving = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         navigatePanel = new Component.NavigatePanel();
+        navigateBarIcon2 = new Component.NavigateBarIcon();
         CreateMenu = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         shadowCreate = new javax.swing.JPanel();
         ViewMenu = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         shadowView = new javax.swing.JPanel();
         EditMenu = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
         shadowEdit = new javax.swing.JPanel();
         ExitButton = new javax.swing.JPanel();
-        navigateBarIcon1 = new Component.NavigateBarIcon();
         navigateSemester1 = new Component.NavigateSemester();
         Semester1Button = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -117,7 +145,6 @@ public class Dashboard1 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(900, 500));
         setName("Form"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(900, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(900, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -134,6 +161,7 @@ public class Dashboard1 extends javax.swing.JFrame {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel10.setText("X");
         jLabel10.setName("jLabel10"); // NOI18N
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -153,7 +181,7 @@ public class Dashboard1 extends javax.swing.JFrame {
         paneMovingLayout.setHorizontalGroup(
             paneMovingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneMovingLayout.createSequentialGroup()
-                .addContainerGap(887, Short.MAX_VALUE)
+                .addContainerGap(893, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addContainerGap())
         );
@@ -164,10 +192,14 @@ public class Dashboard1 extends javax.swing.JFrame {
                 .addComponent(jLabel10))
         );
 
-        getContentPane().add(paneMoving, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 20));
+        getContentPane().add(paneMoving, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 910, 30));
 
         navigatePanel.setName("navigatePanel"); // NOI18N
         navigatePanel.setLayout(null);
+
+        navigateBarIcon2.setName("navigateBarIcon2"); // NOI18N
+        navigatePanel.add(navigateBarIcon2);
+        navigateBarIcon2.setBounds(0, 0, 120, 500);
 
         CreateMenu.setName("CreateMenu"); // NOI18N
         CreateMenu.setOpaque(false);
@@ -183,27 +215,19 @@ public class Dashboard1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Create");
-        jLabel7.setName("jLabel7"); // NOI18N
-
         javax.swing.GroupLayout CreateMenuLayout = new javax.swing.GroupLayout(CreateMenu);
         CreateMenu.setLayout(CreateMenuLayout);
         CreateMenuLayout.setHorizontalGroup(
             CreateMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
         CreateMenuLayout.setVerticalGroup(
             CreateMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CreateMenuLayout.createSequentialGroup()
-                .addComponent(jLabel7)
-                .addGap(0, 15, Short.MAX_VALUE))
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
         navigatePanel.add(CreateMenu);
-        CreateMenu.setBounds(0, 30, 160, 40);
+        CreateMenu.setBounds(0, 30, 120, 40);
 
         shadowCreate.setName("shadowCreate"); // NOI18N
         shadowCreate.setOpaque(false);
@@ -217,7 +241,7 @@ public class Dashboard1 extends javax.swing.JFrame {
         shadowCreate.setLayout(shadowCreateLayout);
         shadowCreateLayout.setHorizontalGroup(
             shadowCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
         shadowCreateLayout.setVerticalGroup(
             shadowCreateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,7 +249,7 @@ public class Dashboard1 extends javax.swing.JFrame {
         );
 
         navigatePanel.add(shadowCreate);
-        shadowCreate.setBounds(0, 30, 160, 40);
+        shadowCreate.setBounds(0, 30, 120, 40);
 
         ViewMenu.setName("ViewMenu"); // NOI18N
         ViewMenu.setOpaque(false);
@@ -241,28 +265,19 @@ public class Dashboard1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("View");
-        jLabel8.setName("jLabel8"); // NOI18N
-
         javax.swing.GroupLayout ViewMenuLayout = new javax.swing.GroupLayout(ViewMenu);
         ViewMenu.setLayout(ViewMenuLayout);
         ViewMenuLayout.setHorizontalGroup(
             ViewMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
         ViewMenuLayout.setVerticalGroup(
             ViewMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ViewMenuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
         navigatePanel.add(ViewMenu);
-        ViewMenu.setBounds(0, 70, 160, 40);
+        ViewMenu.setBounds(0, 70, 120, 40);
 
         shadowView.setName("shadowView"); // NOI18N
         shadowView.setOpaque(false);
@@ -279,7 +294,7 @@ public class Dashboard1 extends javax.swing.JFrame {
         );
 
         navigatePanel.add(shadowView);
-        shadowView.setBounds(0, 70, 160, 40);
+        shadowView.setBounds(0, 70, 120, 40);
 
         EditMenu.setName("EditMenu"); // NOI18N
         EditMenu.setOpaque(false);
@@ -295,28 +310,19 @@ public class Dashboard1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Edit");
-        jLabel9.setName("jLabel9"); // NOI18N
-
         javax.swing.GroupLayout EditMenuLayout = new javax.swing.GroupLayout(EditMenu);
         EditMenu.setLayout(EditMenuLayout);
         EditMenuLayout.setHorizontalGroup(
             EditMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
         EditMenuLayout.setVerticalGroup(
             EditMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EditMenuLayout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addContainerGap())
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
         navigatePanel.add(EditMenu);
-        EditMenu.setBounds(0, 110, 160, 40);
+        EditMenu.setBounds(0, 110, 120, 40);
 
         shadowEdit.setName("shadowEdit"); // NOI18N
         shadowEdit.setOpaque(false);
@@ -333,7 +339,7 @@ public class Dashboard1 extends javax.swing.JFrame {
         );
 
         navigatePanel.add(shadowEdit);
-        shadowEdit.setBounds(0, 110, 160, 40);
+        shadowEdit.setBounds(0, 110, 120, 40);
 
         ExitButton.setName("ExitButton"); // NOI18N
         ExitButton.setOpaque(false);
@@ -357,11 +363,7 @@ public class Dashboard1 extends javax.swing.JFrame {
         navigatePanel.add(ExitButton);
         ExitButton.setBounds(0, 450, 60, 50);
 
-        navigateBarIcon1.setName("navigateBarIcon1"); // NOI18N
-        navigatePanel.add(navigateBarIcon1);
-        navigateBarIcon1.setBounds(0, 0, 60, 500);
-
-        getContentPane().add(navigatePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 500));
+        getContentPane().add(navigatePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 500));
 
         navigateSemester1.setName("navigateSemester1"); // NOI18N
 
@@ -581,7 +583,7 @@ public class Dashboard1 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(navigateSemester1, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 0, 120, 0));
+        getContentPane().add(navigateSemester1, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 0, 90, 10));
 
         jTabbedPane1.setForeground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setName("jTabbedPane1"); // NOI18N
@@ -602,7 +604,7 @@ public class Dashboard1 extends javax.swing.JFrame {
         Border emptyBorder = BorderFactory.createEmptyBorder();
         jTabbedPane1.setBorder(emptyBorder);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, -20, 740, 560));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, -25, 780, 530));
 
         pack();
         setLocationRelativeTo(null);
@@ -612,32 +614,54 @@ public class Dashboard1 extends javax.swing.JFrame {
     private void Semester1ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1ButtonMouseClicked
         smtr = "1";
         tutupSemesterPanel();
+        writeSemester(smtr);
         jTabbedPane1.setSelectedIndex(3);
+        updatePanel.run();
     }//GEN-LAST:event_Semester1ButtonMouseClicked
 
     private void Semester1Button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button1MouseClicked
         smtr = "2";
         tutupSemesterPanel();
+        writeSemester(smtr);
+        jTabbedPane1.setSelectedIndex(3);
+        updatePanel.run();
+
     }//GEN-LAST:event_Semester1Button1MouseClicked
 
     private void Semester1Button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button2MouseClicked
         smtr = "3";
         tutupSemesterPanel();
+        writeSemester(smtr);
+        jTabbedPane1.setSelectedIndex(3);
+        updatePanel.run();
+
     }//GEN-LAST:event_Semester1Button2MouseClicked
 
     private void Semester1Button3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button3MouseClicked
         smtr = "4";
         tutupSemesterPanel();
+        writeSemester(smtr);
+        jTabbedPane1.setSelectedIndex(3);
+        updatePanel.run();
+
     }//GEN-LAST:event_Semester1Button3MouseClicked
 
     private void Semester1Button4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button4MouseClicked
         smtr = "5";
         tutupSemesterPanel();
+        writeSemester(smtr);
+        jTabbedPane1.setSelectedIndex(3);
+        updatePanel.run();
+
     }//GEN-LAST:event_Semester1Button4MouseClicked
 
     private void Semester1Button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button5MouseClicked
         smtr = "6";
         tutupSemesterPanel();
+        writeSemester(smtr);
+        jTabbedPane1.setSelectedIndex(3);
+        updatePanel.run();
+
     }//GEN-LAST:event_Semester1Button5MouseClicked
 
     private void Semester1ButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1ButtonMouseEntered
@@ -659,105 +683,6 @@ public class Dashboard1 extends javax.swing.JFrame {
         Semester1Button1.setOpaque(false);
         Semester1Button1.setBackground(new Color(128,128,128,0));
     }//GEN-LAST:event_Semester1Button1MouseExited
-
-    private void CreateMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMenuMouseEntered
-        CreateMenu.setOpaque(true);
-        CreateMenu.setBackground(new Color(128,128,128,100));
-    }//GEN-LAST:event_CreateMenuMouseEntered
-
-    private void ViewMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMenuMouseEntered
-        ViewMenu.setOpaque(true);
-        ViewMenu.setBackground(new Color(128,128,128,100));
-    }//GEN-LAST:event_ViewMenuMouseEntered
-
-    private void EditMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMenuMouseEntered
-        EditMenu.setOpaque(true);
-        EditMenu.setBackground(new Color(128,128,128,100));
-    }//GEN-LAST:event_EditMenuMouseEntered
-
-    private void CreateMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMenuMouseExited
-        CreateMenu.setOpaque(false);
-        CreateMenu.setBackground(new Color(128,128,128,0));
-    }//GEN-LAST:event_CreateMenuMouseExited
-
-    private void CreateMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMenuMouseClicked
-        shadowOff();
-        shadowCreate.setBackground(new Color(0,0,0,100));
-        shadowCreate.setOpaque(true);
-        jTabbedPane1.setSelectedIndex(1);
-        
-    }//GEN-LAST:event_CreateMenuMouseClicked
-
-    private void none(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_none
-//        jPanel4.setOpaque(true);
-//        jPanel4.setBackground(new Color(255,255,255,100));
-    }//GEN-LAST:event_none
-
-    private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
-        Login pindah = new Login();
-        pindah.show();
-        this.setVisible(false);
-        disposesmooth();
-    }//GEN-LAST:event_ExitButtonMouseClicked
-
-    private void ViewMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMenuMouseExited
-       ViewMenu.setOpaque(false);
-       ViewMenu.setBackground(new Color(128,128,128,0));
-    }//GEN-LAST:event_ViewMenuMouseExited
-
-    private void EditMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMenuMouseExited
-        EditMenu.setOpaque(false);
-        EditMenu.setBackground(new Color(128,128,128,0));
-    }//GEN-LAST:event_EditMenuMouseExited
-
-    private void ViewMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMenuMouseClicked
-        shadowOff();
-        shadowView.setBackground(new Color(0,0,0,100));
-        shadowView.setOpaque(true);
-        jTabbedPane1.setSelectedIndex(2);
-    }//GEN-LAST:event_ViewMenuMouseClicked
-
-    private void EditMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMenuMouseClicked
-        shadowOff();
-        shadowEdit.setBackground(new Color(0,0,0,100));
-        shadowEdit.setOpaque(true);
-        if(open==0){
-            navigateSemester1.show();
-            navigateSemester1.setSize(124,x);
-            Thread th = new Thread(){
-                @Override
-                public void run(){
-                    try{
-                        for(int i = 0;i<=x;i++){
-                            Thread.sleep(0,5);
-                            navigateSemester1.setSize(124,i);
-                        }
-                    }catch(Exception e){
-                        JOptionPane.showMessageDialog(null, e);
-                    }
-                }
-            };th.start();
-            x=500;
-            open=1;
-        }else if(open==1){
-            navigateSemester1.setSize(124,500);
-            Thread th = new Thread(){
-                @Override
-                public void run(){
-                    try{
-                        for(int i = 500;i>=0;i--){
-                            Thread.sleep(0,5);
-                            navigateSemester1.setSize(124,i);
-                        }
-                    }catch(Exception e){
-                        JOptionPane.showMessageDialog(null, e);
-                    }
-                }
-            };th.start();
-            x=0;
-            open=0;
-        }
-    }//GEN-LAST:event_EditMenuMouseClicked
 
      int xx,xy;
     private void paneMovingMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paneMovingMousePressed
@@ -783,12 +708,109 @@ public class Dashboard1 extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jLabel10MouseClicked
 
+    private void ExitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitButtonMouseClicked
+        Login pindah = new Login();
+        pindah.show();
+        this.setVisible(false);
+        disposesmooth();
+    }//GEN-LAST:event_ExitButtonMouseClicked
+
+    private void EditMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMenuMouseExited
+        EditMenu.setOpaque(false);
+        EditMenu.setBackground(new Color(128,128,128,0));
+    }//GEN-LAST:event_EditMenuMouseExited
+
+    private void EditMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMenuMouseEntered
+        EditMenu.setOpaque(true);
+        EditMenu.setBackground(new Color(128,128,128,100));
+    }//GEN-LAST:event_EditMenuMouseEntered
+
+    private void EditMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EditMenuMouseClicked
+        shadowOff();
+        shadowEdit.setBackground(new Color(0,0,0,100));
+        shadowEdit.setOpaque(true);
+        if(open==0){
+            navigateSemester1.show();
+            navigateSemester1.setSize(x,500);
+            Thread th = new Thread(){
+                @Override
+                public void run(){
+                    try{
+                        for(int i = 0;i<=x;i++){
+                            Thread.sleep(0,5);
+                            navigateSemester1.setSize(i,500);
+                        }
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
+            };th.start();
+            x=124;
+            open=1;
+        }else if(open==1){
+            navigateSemester1.setSize(124,500);
+            Thread th = new Thread(){
+                @Override
+                public void run(){
+                    try{
+                        for(int i = 124;i>=0;i--){
+                            Thread.sleep(0,5);
+                            navigateSemester1.setSize(i,500);
+                        }
+                    }catch(Exception e){
+                        JOptionPane.showMessageDialog(null, e);
+                    }
+                }
+            };th.start();
+            x=0;
+            open=0;
+        }
+    }//GEN-LAST:event_EditMenuMouseClicked
+
+    private void ViewMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMenuMouseExited
+        ViewMenu.setOpaque(false);
+        ViewMenu.setBackground(new Color(128,128,128,0));
+    }//GEN-LAST:event_ViewMenuMouseExited
+
+    private void ViewMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMenuMouseEntered
+        ViewMenu.setOpaque(true);
+        ViewMenu.setBackground(new Color(128,128,128,100));
+    }//GEN-LAST:event_ViewMenuMouseEntered
+
+    private void ViewMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMenuMouseClicked
+        shadowOff();
+        shadowView.setBackground(new Color(0,0,0,100));
+        shadowView.setOpaque(true);
+        jTabbedPane1.setSelectedIndex(2);
+    }//GEN-LAST:event_ViewMenuMouseClicked
+
+    private void none(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_none
+        //        jPanel4.setOpaque(true);
+        //        jPanel4.setBackground(new Color(255,255,255,100));
+    }//GEN-LAST:event_none
+
+    private void CreateMenuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMenuMouseExited
+        CreateMenu.setOpaque(false);
+        CreateMenu.setBackground(new Color(128,128,128,0));
+    }//GEN-LAST:event_CreateMenuMouseExited
+
+    private void CreateMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMenuMouseEntered
+        CreateMenu.setOpaque(true);
+        CreateMenu.setBackground(new Color(128,128,128,100));
+    }//GEN-LAST:event_CreateMenuMouseEntered
+
+    private void CreateMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMenuMouseClicked
+        shadowOff();
+        shadowCreate.setBackground(new Color(0,0,0,100));
+        shadowCreate.setOpaque(true);
+        jTabbedPane1.setSelectedIndex(1);
+
+    }//GEN-LAST:event_CreateMenuMouseClicked
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-//                FlatLaf.registerCustomDefaultsSource("");
                 new Dashboard1().setVisible(true);
-                new Dashboard1().pack();
             }
         });
     }
@@ -814,11 +836,8 @@ public class Dashboard1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private Component.NavigateBarIcon navigateBarIcon1;
+    private Component.NavigateBarIcon navigateBarIcon2;
     private Component.NavigatePanel navigatePanel;
     private Component.NavigateSemester navigateSemester1;
     private javax.swing.JPanel paneMoving;
