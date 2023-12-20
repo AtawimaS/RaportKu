@@ -268,13 +268,14 @@ public class Login extends javax.swing.JFrame {
         char[] passwordChars = jPasswordField1.getPassword();
         String password = new String(passwordChars);
 
-        try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/rapotku?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "")) {
+        try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root", "")) {
             // Teacher authentication
             String teacherSql = "SELECT * FROM dataguru WHERE id_guru=? AND password=?";
+            System.out.println(teacherSql);
             try (PreparedStatement teacherStmt = con.prepareStatement(teacherSql)) {
                 teacherStmt.setString(1, username);
                 teacherStmt.setString(2, password);
-
+                System.out.println(teacherStmt);
                 try (ResultSet rs = teacherStmt.executeQuery()) {
                     if (rs.next()) {
                         Dashboard1 pindah = new Dashboard1();
@@ -293,7 +294,7 @@ public class Login extends javax.swing.JFrame {
             try (PreparedStatement studentStmt = con.prepareStatement(studentSql)) {
                 studentStmt.setString(1, username);
                 studentStmt.setString(2, password);
-
+                System.out.println(studentStmt);
                 try (ResultSet ra = studentStmt.executeQuery()) {
                     if (ra.next()) {
                         writePasswordToNIMFile(password);

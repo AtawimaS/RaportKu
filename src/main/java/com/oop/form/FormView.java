@@ -70,7 +70,7 @@ public class FormView extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(6, 389, 87, 23);
+        jButton1.setBounds(6, 389, 100, 23);
 
         jButton2.setText("Semester 2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +79,7 @@ public class FormView extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(112, 389, 87, 23);
+        jButton2.setBounds(130, 390, 100, 23);
 
         jButton3.setText("Semester 3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class FormView extends javax.swing.JPanel {
             }
         });
         add(jButton3);
-        jButton3.setBounds(218, 389, 87, 23);
+        jButton3.setBounds(250, 390, 100, 23);
 
         jButton4.setText("Semester 4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +97,7 @@ public class FormView extends javax.swing.JPanel {
             }
         });
         add(jButton4);
-        jButton4.setBounds(324, 389, 87, 23);
+        jButton4.setBounds(380, 390, 100, 23);
 
         jButton5.setText("Semester 5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +106,7 @@ public class FormView extends javax.swing.JPanel {
             }
         });
         add(jButton5);
-        jButton5.setBounds(430, 389, 87, 23);
+        jButton5.setBounds(510, 390, 110, 23);
 
         jButton6.setText("Semester 6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class FormView extends javax.swing.JPanel {
             }
         });
         add(jButton6);
-        jButton6.setBounds(536, 389, 87, 23);
+        jButton6.setBounds(640, 390, 110, 23);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
