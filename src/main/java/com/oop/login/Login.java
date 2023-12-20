@@ -24,6 +24,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.Color;
+import java.sql.PreparedStatement;
 import javax.swing.JFrame;
 
 
@@ -266,53 +267,51 @@ public class Login extends javax.swing.JFrame {
         String username = jUsernameField1.getText();
         char[] passwordChars = jPasswordField1.getPassword();
         String password = new String(passwordChars);
-        
-       try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/rapotku","root","");
-            
-            Statement stm = con.createStatement();
-            
-            String sql = "select * from dataguru where id_guru='"+username+"' and password='"+password+"'";
-            ResultSet rs = stm.executeQuery(sql);
-            
-            if (!username.isEmpty() && password.length() > 0 ) {
-                if (rs.next()) {
+
+        try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/rapotku?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "")) {
+            // Teacher authentication
+            String teacherSql = "SELECT * FROM dataguru WHERE id_guru=? AND password=?";
+            try (PreparedStatement teacherStmt = con.prepareStatement(teacherSql)) {
+                teacherStmt.setString(1, username);
+                teacherStmt.setString(2, password);
+
+                try (ResultSet rs = teacherStmt.executeQuery()) {
+                    if (rs.next()) {
                         Dashboard1 pindah = new Dashboard1();
-                        pindah.setVisible(true);
+                        pindah.show();
                         this.setVisible(false);
-                        this.dispose();
+                        disposesmooth();
+                        return; // Exit the method if authentication succeeds
+                    }
                 }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-            
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-       try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/rapotku","root","");
-            
-            Statement stm = con.createStatement();
-            
-            String sql = "select * from datasiswa where nama_siswa='"+username+"' and id_siswa='"+password+"'";
-            ResultSet rs = stm.executeQuery(sql);
-            
-            if (!username.isEmpty() && password.length() > 0 ) {
-                if(rs.next()){
-                    writePasswordToNIMFile(password);
-                    Dashboard_Siswa pindah = new Dashboard_Siswa();
-                    pindah.show();
-                    this.setVisible(false);
-                    disposesmooth();
-                }else{
-                    jUsernameField1.setText("");
-                    jPasswordField1.setText("");
-                    JOptionPane.showMessageDialog(menuButton1, "Harap isi username dan passwordnya dengan benar!!");
+
+            // Student authentication
+            String studentSql = "SELECT * FROM datasiswa WHERE nama_siswa=? AND id_siswa=?";
+            try (PreparedStatement studentStmt = con.prepareStatement(studentSql)) {
+                studentStmt.setString(1, username);
+                studentStmt.setString(2, password);
+
+                try (ResultSet ra = studentStmt.executeQuery()) {
+                    if (ra.next()) {
+                        writePasswordToNIMFile(password);
+                        Dashboard_Siswa pindah = new Dashboard_Siswa();
+                        pindah.show();
+                        this.setVisible(false);
+                        disposesmooth();
+                    } else {
+                        jUsernameField1.setText("");
+                        jPasswordField1.setText("");
+                        JOptionPane.showMessageDialog(menuButton1, "Harap isi username dan passwordnya dengan benar!!");
+                    }
                 }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-            
-        }catch(Exception e){
-            System.out.println(e.getMessage());
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_menuButton1MouseClicked
 

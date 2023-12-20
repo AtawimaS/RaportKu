@@ -20,7 +20,6 @@ com\oop\form\FormCreate$3.class
 Graph\chart\blankchart1\BlankPlotChatRender.class
 com\oop\form\UpdatePanel$6.class
 com\oop\login\Login$9.class
-com\oop\Menu\View.class
 com\oop\dashboard\ModelData.class
 com\oop\dashboard\Dashboard1$15.class
 com\oop\form\FormView$4.class
@@ -48,7 +47,6 @@ com\oop\login\Login$DatabaseConnection.class
 com\oop\dashboard\Dashboard1$12.class
 com\oop\dashboard\Dashboard1$1.class
 com\oop\form\UpdatePanel$2.class
-com\oop\Menu\Update.class
 com\oop\dashboard\Dashboard1$13.class
 Graph\chart1\ModelChart.class
 Graph\spline1\Spline.class
@@ -63,10 +61,7 @@ com\oop\form\FormView$5.class
 com\oop\form\UpdatePanel.class
 com\oop\dashboard\Dashboard1$5.class
 swing\shadow\util\RippleEffect$1.class
-com\oop\Menu\Create.class
 com\oop\form\FormFirst.class
-com\oop\slider\Slideshow$1.class
-com\raven\swing\slideshow\EventPagination.class
 Component\NavigateSemester.class
 com\oop\login\Login$7.class
 com\oop\form\FormCreate$1.class
@@ -76,7 +71,6 @@ Graph\panel1\PanelGradient.class
 Component\SemesterChangeListener.class
 Graph\panel1\PanelShadow$GradientType.class
 com\oop\dashboard\Dashboard1$17.class
-com\oop\slider\Slideshow.class
 Graph\shadow1\GraphicsUtilities.class
 Graph\chart1\CurveLineChart.class
 com\oop\form\FormView$2.class

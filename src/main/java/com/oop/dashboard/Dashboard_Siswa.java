@@ -27,9 +27,6 @@ import javax.swing.table.DefaultTableModel;
 public class Dashboard_Siswa extends javax.swing.JFrame {
     Connection con;
     String nim;
-    /**
-     * Creates new form Dashboard_Siswa
-     */
     public Dashboard_Siswa() {
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root", "");
@@ -90,6 +87,14 @@ public class Dashboard_Siswa extends javax.swing.JFrame {
             System.out.println("Error reading nim.txt: " + e.getMessage());
         }
         return word;
+    }
+    private void deletenim(){
+        File myObj = new File("nim.txt");
+        if (myObj.delete()) {
+            System.out.println("Deleted the file: " + myObj.getName());
+        } else {
+            System.out.println("Failed to delete the file.");
+        }
     }
     public void run() {
         try {
@@ -226,6 +231,7 @@ public class Dashboard_Siswa extends javax.swing.JFrame {
     private void create_button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_create_button1MouseClicked
         nim = readNIM();
         tampil(nim);
+        deletenim();
     }//GEN-LAST:event_create_button1MouseClicked
 
     /**

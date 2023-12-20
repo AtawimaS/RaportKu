@@ -82,7 +82,6 @@ public class UpdatePanel extends javax.swing.JPanel {
         } else {
             System.out.println("Failed to delete the file.");
         }
-
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

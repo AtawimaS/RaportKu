@@ -1,15 +1,9 @@
 
 package com.oop.dashboard;
 
-import com.oop.slider.*;
 import com.oop.form.*;
 import Component.NavigateSemester;
 
-import com.formdev.flatlaf.FlatLaf;
-import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
-import com.formdev.flatlaf.fonts.roboto.FlatRobotoFont;
-import com.formdev.flatlaf.themes.FlatMacDarkLaf;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import Component.SemesterChangeListener;
 import com.oop.login.Login;
@@ -33,7 +27,6 @@ public class Dashboard1 extends javax.swing.JFrame {
     int x,y;
     String smtr;
     UpdatePanel updatePanel = new UpdatePanel();
-//    jTabbedPane1.setSelectedIndex(0);
     private NavigateSemester NavigateSemester;
     public Dashboard1() {
         initComponents();
