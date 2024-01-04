@@ -1,0 +1,190 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\.
+Requires JDK:	Yes
+Requires 64-Bit: Yes
+Java min ver:	1.010.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Cloudflare\Cloudflare WARP\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Graphviz\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Java\jre-1.8\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\msys64\mingw64\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\heroku\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-20\bin\javac.exe (OK)
+Version string: 1.020.000_002 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe
+Launcher args:	-jar "C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe"
+Args length:	122/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\.
+Requires JDK:	Yes
+Requires 64-Bit: Yes
+Java min ver:	1.010.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Cloudflare\Cloudflare WARP\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Graphviz\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Java\jre-1.8\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\msys64\mingw64\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\heroku\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-20\bin\javac.exe (OK)
+Version string: 1.020.000_002 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe
+Launcher args:	-jar "C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe"
+Args length:	122/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Cloudflare\Cloudflare WARP\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Graphviz\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Java\jre-1.8\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\msys64\mingw64\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\heroku\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe (OK)
+Version string: 1.020.000_002 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe
+Launcher args:	-jar "C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe"
+Args length:	122/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Graphviz\bin;C:\Program Files (x86)\Java\jre-1.8\bin;C:\Program Files\dotnet\;C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin;C:\Program Files\Git\cmd;C:\Users\untu0\AppData\Local\Microsoft\WindowsApps;C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin;C:\msys64\mingw64\bin;C:\Program Files\JetBrains\PyCharm 2023.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin;;C:\Users\untu0\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Program Files\heroku\bin;C:\Program Files\Java\jdk-20\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\system32\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\WINDOWS\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Cloudflare\Cloudflare WARP\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Graphviz\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\Java\jre-1.8\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\apache-maven-3.9.5-bin\apache-maven-3.9.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\msys64\mingw64\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.1\bin\javaw.exe (not found)
+Check launcher:	C:\Users\untu0\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\heroku\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe (OK)
+Version string: 1.020.000_002 / 64-Bit (OK)
+Launcher:	C:\Program Files\Java\jdk-20\bin\javaw.exe
+Launcher args:	-jar "C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\RaportKu.exe"
+Args length:	122/32768 chars
+Exit code:	0

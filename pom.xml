@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.OOP</groupId>
-    <artifactId>FinalProject1</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>RaportKu</artifactId>
+    <version>0.75</version>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
@@ -57,11 +57,27 @@
                 <directory>src/main/java</directory>
             </resource>
         </resources>
+        <plugins>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+                <archive>
+                <manifest>
+                    <addClasspath>true</addClasspath>
+                    <classpathPrefix>lib/</classpathPrefix>
+                    <mainClass>com.oop.login.Login</mainClass>
+                </manifest>
+                </archive>
+            </configuration>
+            </plugin>
+        </plugins>
     </build>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
-        <exec.mainClass>com.oop.finalproject1.FinalProject1</exec.mainClass>
+        <exec.mainClass>com.oop.login.Login</exec.mainClass>
     </properties>
 </project>
