@@ -1,6 +1,7 @@
 
 package com.oop.form;
 
+import com.raven.datechooser.SelectedDate;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Connection;
@@ -51,6 +52,7 @@ public class FormCreate extends javax.swing.JPanel {
 
         jRadioButton3.setText("jRadioButton3");
 
+        dateChooser1.setDateFormat("yyyy-MM-dd");
         dateChooser1.setTextRefernce(txtDate);
 
         setLayout(null);
@@ -146,6 +148,7 @@ public class FormCreate extends javax.swing.JPanel {
         String id_siswa = jTextField1.getText();
         String nama_siswa = jTextField2.getText();
         String gender="";
+        String date = txtDate.getText();
         if(jRadioButton1.isSelected()){
             gender = "Male";
         }else if (jRadioButton2.isSelected()){
@@ -153,16 +156,20 @@ public class FormCreate extends javax.swing.JPanel {
         }else{
             JOptionPane.showMessageDialog(jRadioButton1,"Mohon gender di isi");
         }
-
-        String sql = "INSERT INTO `datasiswa` (`id_siswa`, `nama_siswa`, `gender`) VALUES (?, ?, ?)";
+        System.out.println(date);
+        String sql = "INSERT INTO `datasiswa` (`id_siswa`, `nama_siswa`, `gender`, `tanggal_lahir`) VALUES (?, ?, ?, ?)";
         try {
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, id_siswa);
             pst.setString(2, nama_siswa);
             pst.setString(3, gender);
+            pst.setString(4, date);
+            System.out.println(sql);
             pst.executeUpdate();
             JOptionPane.showMessageDialog(create_button1, "Data telah ditambahkan");
+            System.out.println(sql);
         } catch (SQLException e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_create_button1MouseClicked
 

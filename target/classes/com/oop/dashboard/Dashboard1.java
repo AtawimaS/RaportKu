@@ -63,11 +63,45 @@ public class Dashboard1 extends javax.swing.JFrame {
                 }
                 else if(index == 1){
                     jTabbedPane1.setSelectedIndex(2);
-                    System.out.println("View");
                 }
                 else if(index == 2){
-                    jTabbedPane1.setSelectedIndex(3);
-                    System.out.println("Update");
+//                    jTabbedPane1.setSelectedIndex(3);
+                    if(open==0){
+                        navigateSemester1.show();
+                        navigateSemester1.setSize(x,500);
+                        Thread th = new Thread(){
+                            @Override
+                            public void run(){
+                                try{
+                                    for(int i = 0;i<=x;i++){
+                                        Thread.sleep(0,5);
+                                        navigateSemester1.setSize(i,500);
+                                    }
+                                }catch(Exception e){
+                                    JOptionPane.showMessageDialog(null, e);
+                                }
+                            }
+                        };th.start();
+                        x=124;
+                        open=1;
+                    }else if(open==1){
+                        navigateSemester1.setSize(124,500);
+                        Thread th = new Thread(){
+                            @Override
+                            public void run(){
+                                try{
+                                    for(int i = 124;i>=0;i--){
+                                        Thread.sleep(0,5);
+                                        navigateSemester1.setSize(i,500);
+                                    }
+                                }catch(Exception e){
+                                    JOptionPane.showMessageDialog(null, e);
+                                }
+                            }
+                        };th.start();
+                        x=0;
+                        open=0;
+                    }
                 }
                 else if(index == 3){
                     System.out.println("Logout");

@@ -102,6 +102,7 @@ com\oop\dashboard\Dashboard1$7.class
 Graph\chart\blankchart\SeriesSize.class
 com\raven\datechooser\Slider$1.class
 Component\SemesterChangeListener.class
+com\oop\dashboard\Dashboard1$1$1.class
 com\raven\datechooser\Slider.class
 Graph\panel\PanelShadow$GradientType.class
 Graph\shadow\ShadowRenderer.class
@@ -129,6 +130,7 @@ com\raven\datechooser\Slider$3.class
 Graph\panel\PanelShadow$ShadowType.class
 com\cell\PanelAction$3.class
 com\raven\datechooser\DateChooser$6.class
+com\oop\dashboard\Dashboard1$1$2.class
 Component\MenuButton.class
 Graph\chart\CurveLineChart.class
 Graph\panel\PanelGradient$GradientType.class

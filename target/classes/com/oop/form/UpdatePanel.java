@@ -274,12 +274,12 @@ public class UpdatePanel extends javax.swing.JPanel {
             
             int affectedRows = pst.executeUpdate();
             
-            if (affectedRows > 0) {
-                System.out.println("Data berhasil dihapus dari " + table);
-                JOptionPane.showMessageDialog(this, "Data berhasil dihapus!");
-            } else {
-                System.out.println("Tidak ada data yang dihapus dari " + table);
-            }
+//            if (affectedRows > 0) {
+//                System.out.println("Data berhasil dihapus dari " + table);
+//                JOptionPane.showMessageDialog(this, "Data berhasil dihapus!");
+//            } else {
+//                System.out.println("Tidak ada data yang dihapus dari " + table);
+//            }
         } catch (SQLException e) {
             System.out.println("Error: " + e.getMessage());
         }

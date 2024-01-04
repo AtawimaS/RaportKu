@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Des 2023 pada 01.39
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.2.4
+-- Waktu pembuatan: 04 Jan 2024 pada 08.05
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -143,17 +143,16 @@ INSERT INTO `dataguru` (`id_guru`, `nama_guru`, `gender`, `email`, `password`) V
 CREATE TABLE `datasiswa` (
   `id_siswa` varchar(15) NOT NULL,
   `nama_siswa` varchar(50) NOT NULL,
-  `gender` varchar(50) NOT NULL
+  `gender` varchar(50) NOT NULL,
+  `tanggal_lahir` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `datasiswa`
 --
 
-INSERT INTO `datasiswa` (`id_siswa`, `nama_siswa`, `gender`) VALUES
-('', '', ''),
-('1546', 'oioio', 'binary'),
-('2602', 'Nikolas Cantik', 'Female');
+INSERT INTO `datasiswa` (`id_siswa`, `nama_siswa`, `gender`, `tanggal_lahir`) VALUES
+('260210', 'Tan, William', 'Male', '2004-06-27');
 
 --
 -- Trigger `datasiswa`
@@ -215,8 +214,7 @@ CREATE TABLE `semester_1` (
 --
 
 INSERT INTO `semester_1` (`id_siswa`, `matematika`, `ipa`, `ips`, `bin`, `big`) VALUES
-('2602', 100, 100, 90, 85, 99),
-('1546', 0, 0, 0, 0, 0);
+('260210', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -238,8 +236,7 @@ CREATE TABLE `semester_2` (
 --
 
 INSERT INTO `semester_2` (`id_siswa`, `matematika`, `ipa`, `ips`, `bin`, `big`) VALUES
-('2602', 100, 100, 100, 77, 75),
-('1546', 0, 0, 0, 0, 0);
+('260210', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -261,8 +258,7 @@ CREATE TABLE `semester_3` (
 --
 
 INSERT INTO `semester_3` (`id_siswa`, `matematika`, `ipa`, `ips`, `bin`, `big`) VALUES
-('2602', 0, 0, 0, 0, 0),
-('1546', 0, 0, 0, 0, 0);
+('260210', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -284,8 +280,7 @@ CREATE TABLE `semester_4` (
 --
 
 INSERT INTO `semester_4` (`id_siswa`, `matematika`, `ipa`, `ips`, `bin`, `big`) VALUES
-('2602', 0, 0, 0, 0, 0),
-('1546', 0, 0, 0, 0, 0);
+('260210', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -307,8 +302,7 @@ CREATE TABLE `semester_5` (
 --
 
 INSERT INTO `semester_5` (`id_siswa`, `matematika`, `ipa`, `ips`, `bin`, `big`) VALUES
-('2602', 0, 0, 0, 0, 0),
-('1546', 0, 0, 0, 0, 0);
+('260210', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -330,8 +324,7 @@ CREATE TABLE `semester_6` (
 --
 
 INSERT INTO `semester_6` (`id_siswa`, `matematika`, `ipa`, `ips`, `bin`, `big`) VALUES
-('2602', 0, 0, 0, 0, 0),
-('1546', 0, 0, 0, 0, 0);
+('260210', 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
