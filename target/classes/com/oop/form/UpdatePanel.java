@@ -24,7 +24,7 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 
-public class UpdatePanel extends javax.swing.JPanel {
+public class UpdatePanel<T> extends javax.swing.JPanel {
         
     Connection con;
     private String smtr;

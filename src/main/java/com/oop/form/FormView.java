@@ -15,19 +15,13 @@ import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
 
 
-public class FormView extends javax.swing.JPanel {
-
-    /**
-     * Creates new form FormView
-     */
-    
+public class FormView<T> extends javax.swing.JPanel {
     Connection con;
     public FormView() {
         initComponents();
-                try{
-            con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root","");
-        }
-        catch(SQLException E){
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root", "");
+        } catch (SQLException E) {
             System.out.println(E.getMessage());
         }
     }
@@ -119,21 +113,24 @@ public class FormView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-String sql = "SELECT * FROM view_semester_1";
-        
-        try{
+        String sql = "SELECT * FROM view_semester_1";
+        try {
             PreparedStatement pst = con.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
-            DefaultTableModel model = (DefaultTableModel)jTable2.getModel();
+            DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
             model.setRowCount(0);
 
-            while(rs.next()){
-                model.addRow(new String[]{rs.getString(1), rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),});
+            while (rs.next()) {
+                // Example: Assuming all columns are of type String
+                model.addRow(new Object[]{
+                        rs.getString(1), rs.getString(2), rs.getString(3),
+                        rs.getString(4), rs.getString(5), rs.getString(6),
+                        rs.getString(7), rs.getString(8), rs.getString(9)
+                });
             }
-        }
-        catch(SQLException e){
-            System.out.println("Error: "+ e.getMessage());
-        }        // TODO add your handling code here:
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

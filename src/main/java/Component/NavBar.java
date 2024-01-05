@@ -35,7 +35,7 @@ public class NavBar extends javax.swing.JPanel {
     
     public void initMenu(EventMenu event){
         this.event = event;
-        addMenu(new ImageIcon(getClass().getResource("/com/icon/1.png")),"Dashboard", 0);
+        addMenu(new ImageIcon(getClass().getResource("/com/icon/1.png")),"Create", 0);
         addMenu(new ImageIcon(getClass().getResource("/com/icon/2.png")),"View", 1);
         addMenu(new ImageIcon(getClass().getResource("/com/icon/3.png")),"Update", 2);
         addEmpty();
