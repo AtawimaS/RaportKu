@@ -58,6 +58,7 @@ public class FormView<T> extends javax.swing.JPanel {
         jScrollPane2.setBounds(6, 133, 745, 238);
 
         jButton1.setText("Semester 1");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -67,6 +68,7 @@ public class FormView<T> extends javax.swing.JPanel {
         jButton1.setBounds(6, 389, 100, 23);
 
         jButton2.setText("Semester 2");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -76,6 +78,7 @@ public class FormView<T> extends javax.swing.JPanel {
         jButton2.setBounds(130, 390, 100, 23);
 
         jButton3.setText("Semester 3");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -85,6 +88,7 @@ public class FormView<T> extends javax.swing.JPanel {
         jButton3.setBounds(250, 390, 100, 23);
 
         jButton4.setText("Semester 4");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -94,6 +98,7 @@ public class FormView<T> extends javax.swing.JPanel {
         jButton4.setBounds(380, 390, 100, 23);
 
         jButton5.setText("Semester 5");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -103,6 +108,7 @@ public class FormView<T> extends javax.swing.JPanel {
         jButton5.setBounds(510, 390, 110, 23);
 
         jButton6.setText("Semester 6");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);

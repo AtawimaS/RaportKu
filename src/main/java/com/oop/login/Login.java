@@ -183,11 +183,6 @@ public class Login extends javax.swing.JFrame {
                 menuButton1MouseClicked(evt);
             }
         });
-        menuButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout login_rectangle1Layout = new javax.swing.GroupLayout(login_rectangle1);
         login_rectangle1.setLayout(login_rectangle1Layout);
@@ -273,13 +268,12 @@ public class Login extends javax.swing.JFrame {
         try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root", "")) {
             // Teacher authentication
             String teacherSql = "SELECT * FROM dataguru WHERE id_guru=? AND password=?";
-            System.out.println(teacherSql);
             try (PreparedStatement teacherStmt = con.prepareStatement(teacherSql)) {
                 teacherStmt.setString(1, username);
                 teacherStmt.setString(2, password);
-                System.out.println(teacherStmt);
                 try (ResultSet rs = teacherStmt.executeQuery()) {
                     if (rs.next()) {
+                        WriteFile(username);
                         Dashboard1 pindah = new Dashboard1();
                         pindah.show();
                         this.setVisible(false);
@@ -296,10 +290,9 @@ public class Login extends javax.swing.JFrame {
             try (PreparedStatement studentStmt = con.prepareStatement(studentSql)) {
                 studentStmt.setString(1, username);
                 studentStmt.setString(2, password);
-                System.out.println(studentStmt);
                 try (ResultSet ra = studentStmt.executeQuery()) {
                     if (ra.next()) {
-                        writePasswordToNIMFile(password);
+                        WriteFile(password);
                         Dashboard_Siswa pindah = new Dashboard_Siswa();
                         pindah.show();
                         this.setVisible(false);
@@ -318,11 +311,7 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_menuButton1MouseClicked
 
-    private void menuButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuButton1ActionPerformed
-
-    private void writePasswordToNIMFile(String password) {
+    private void WriteFile(String password) {
     try {
         File file = new File("nim.txt");
         if (!file.exists()) {

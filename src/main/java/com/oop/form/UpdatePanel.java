@@ -29,6 +29,20 @@ public class UpdatePanel<T> extends javax.swing.JPanel {
     Connection con;
     private String smtr;
 
+    public UpdatePanel() {
+        initComponents();
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root", "");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public void run() {
+        initComponents();
+        smtr = readSemester();
+        tampil(smtr);
+    }
+    
     private void tampil(String semester) {
         String sqlDasar = "SELECT * FROM semester_";
         String sql = sqlDasar.concat(semester);
@@ -46,22 +60,7 @@ public class UpdatePanel<T> extends javax.swing.JPanel {
             e.printStackTrace();
         }
     }
-    public UpdatePanel() {
-        initComponents();
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root", "");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-    public void run() {
-        try {
-            smtr = readSemester();
-            tampil(smtr);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    
     private String readSemester() {
         String word = null;
         try {
@@ -179,6 +178,7 @@ public class UpdatePanel<T> extends javax.swing.JPanel {
         add(txtBIG, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 147, 87, -1));
 
         DeleteButton.setText("DELETE");
+        DeleteButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         DeleteButton.setMaximumSize(new java.awt.Dimension(75, 30));
         DeleteButton.setMinimumSize(new java.awt.Dimension(75, 30));
         DeleteButton.setPreferredSize(new java.awt.Dimension(75, 30));
@@ -190,6 +190,8 @@ public class UpdatePanel<T> extends javax.swing.JPanel {
         add(DeleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 240, 60));
 
         UpdateButton.setText("UPDATE");
+        UpdateButton.setContentAreaFilled(false);
+        UpdateButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         UpdateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UpdateButtonActionPerformed(evt);

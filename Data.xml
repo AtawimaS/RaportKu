@@ -13,10 +13,10 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\untu0\OneDrive - Bina Nusantara\Binus\Semester 3\OOP\Final Project\FinalProject\FinalProject1\src\main\java\icon\RAPORTKU.ico</icon>
+  <icon></icon>
   <jre>
     <path>%JAVA_HOME%;%PATH%</path>
-    <requiresJdk>false</requiresJdk>
+    <requiresJdk>true</requiresJdk>
     <requires64Bit>false</requires64Bit>
     <minVersion>1</minVersion>
     <maxVersion></maxVersion>

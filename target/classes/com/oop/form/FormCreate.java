@@ -57,15 +57,16 @@ public class FormCreate extends javax.swing.JPanel {
 
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Cambria", 0, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Bodoni MT", 0, 70)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Create");
         add(jLabel1);
-        jLabel1.setBounds(266, 31, 260, 57);
+        jLabel1.setBounds(-4, 31, 840, 85);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("ID Siswa");
         add(jLabel2);
-        jLabel2.setBounds(190, 140, 120, 20);
+        jLabel2.setBounds(280, 130, 120, 20);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,14 +74,14 @@ public class FormCreate extends javax.swing.JPanel {
             }
         });
         add(jTextField1);
-        jTextField1.setBounds(290, 140, 176, 22);
+        jTextField1.setBounds(380, 130, 176, 22);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Nama Siswa");
         add(jLabel3);
-        jLabel3.setBounds(190, 176, 110, 30);
+        jLabel3.setBounds(280, 170, 110, 30);
         add(jTextField2);
-        jTextField2.setBounds(290, 180, 176, 22);
+        jTextField2.setBounds(380, 170, 176, 22);
 
         txtDate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         txtDate.addActionListener(new java.awt.event.ActionListener() {
@@ -89,25 +90,25 @@ public class FormCreate extends javax.swing.JPanel {
             }
         });
         add(txtDate);
-        txtDate.setBounds(290, 220, 180, 22);
+        txtDate.setBounds(380, 210, 180, 22);
 
         jRadioButton1.setText("Male");
         add(jRadioButton1);
-        jRadioButton1.setBounds(300, 260, 80, 21);
+        jRadioButton1.setBounds(390, 250, 80, 21);
 
         jRadioButton2.setText("Female");
         add(jRadioButton2);
-        jRadioButton2.setBounds(390, 260, 80, 21);
+        jRadioButton2.setBounds(480, 250, 80, 21);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Tanggal Lahir");
         add(jLabel4);
-        jLabel4.setBounds(190, 220, 90, 20);
+        jLabel4.setBounds(280, 210, 90, 20);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("Gender");
         add(jLabel6);
-        jLabel6.setBounds(190, 260, 90, 20);
+        jLabel6.setBounds(280, 250, 90, 20);
 
         create_button1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -137,7 +138,7 @@ public class FormCreate extends javax.swing.JPanel {
         );
 
         add(create_button1);
-        create_button1.setBounds(260, 300, 170, 40);
+        create_button1.setBounds(350, 290, 170, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -164,10 +165,10 @@ public class FormCreate extends javax.swing.JPanel {
             pst.setString(2, nama_siswa);
             pst.setString(3, gender);
             pst.setString(4, date);
-            System.out.println(sql);
             pst.executeUpdate();
             JOptionPane.showMessageDialog(create_button1, "Data telah ditambahkan");
-            System.out.println(sql);
+            jTextField1.setText("");
+            jTextField2.setText("");
         } catch (SQLException e) {
             e.printStackTrace();
         }

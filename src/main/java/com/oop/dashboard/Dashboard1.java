@@ -17,10 +17,18 @@ import javax.swing.border.Border;
 
 
 import java.io.File;  
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.Scanner;
 import javax.swing.SwingWorker;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author Will
@@ -31,7 +39,7 @@ public class Dashboard1 extends javax.swing.JFrame {
     private int x, y;
     private String smtr;
     private UpdatePanel updatePanel = new UpdatePanel();
-
+    Connection con;
     public int getOpen() {
         return open;
     }
@@ -49,9 +57,15 @@ public class Dashboard1 extends javax.swing.JFrame {
     }
 
     public Dashboard1() {
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost/raportku", "root", "");
+        } catch (SQLException E) {
+            System.out.println(E.getMessage());
+        }
         initComponents();
         createSemester();
         initializeEventMenu();
+        setTextGuru();
     }
 
     private void initializeEventMenu() {
@@ -105,11 +119,12 @@ public class Dashboard1 extends javax.swing.JFrame {
                 }
                 else if(index == 3){
                     System.out.println("Logout");
-                        Login pindah = new Login();
-                        pindah.show();
-                        setVisible(false);
-                        disposesmooth();
-                        return; 
+                    deletenim();
+                    Login pindah = new Login();
+                    pindah.show();
+                    setVisible(false);
+                    disposesmooth();
+                    return; 
                 }
                 else{
                 }
@@ -117,7 +132,41 @@ public class Dashboard1 extends javax.swing.JFrame {
         };
         navBar1.initMenu(event);
     }
+    
+    private void setTextGuru() {
+        String nim = null;
+        try {
+            File myObj = new File("nim.txt");
+            Scanner myReader = new Scanner(myObj);
 
+            if (myReader.hasNext()) {
+                nim = myReader.next();
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("Error reading nim.txt: " + e.getMessage());
+        }
+
+        String sql = "SELECT nama_guru FROM dataguru WHERE id_guru = ?";
+
+        try (PreparedStatement pst = con.prepareStatement(sql)) {
+            pst.setString(1, nim);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                String guruName = rs.getString("nama_guru");
+                GuruName.setText(guruName);
+            } else {
+                System.out.println("No data found for nim: " + nim);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        deletenim();
+    }
+
+    
     // Multithreading
     private void tutupSemesterPanel() {
         navigateSemester1.setSize(124, 500);
@@ -177,6 +226,26 @@ public class Dashboard1 extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
+    
+    private void deletenim() {
+        try {
+            File myObj = new File("nim.txt");
+
+            if (myObj.exists()) {
+                if (myObj.delete()) {
+                    System.out.println("Deleted the file: " + myObj.getName());
+                } else {
+                    System.out.println("Failed to delete the file.");
+                }
+            } else {
+                System.out.println("File not found.");
+            }
+        } catch (SecurityException e) {
+            System.out.println("SecurityException: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
     private void writeSemester(String semester) {
         try (FileWriter myWriter = new FileWriter("semester.txt")) {
@@ -193,6 +262,7 @@ public class Dashboard1 extends javax.swing.JFrame {
 
         paneMoving = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
+        GuruName = new javax.swing.JLabel();
         navigateSemester1 = new Component.NavigateSemester();
         Semester1Button = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -266,6 +336,12 @@ public class Dashboard1 extends javax.swing.JFrame {
         );
 
         getContentPane().add(paneMoving, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1010, 30));
+
+        GuruName.setBackground(new java.awt.Color(255, 255, 255));
+        GuruName.setForeground(new java.awt.Color(255, 255, 255));
+        GuruName.setText("No Name");
+        GuruName.setName("GuruName"); // NOI18N
+        getContentPane().add(GuruName, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 50, 80, -1));
 
         navigateSemester1.setName("navigateSemester1"); // NOI18N
 
@@ -566,55 +642,50 @@ public class Dashboard1 extends javax.swing.JFrame {
     
     private void Semester1ButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1ButtonMouseClicked
         smtr = "1";
-        tutupSemesterPanel();
         writeSemester(smtr);
+        tutupSemesterPanel();
+        updatePanel.run();;
         jTabbedPane1.setSelectedIndex(3);
-        updatePanel.run();
     }//GEN-LAST:event_Semester1ButtonMouseClicked
 
     private void Semester1Button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button1MouseClicked
         smtr = "2";
-        tutupSemesterPanel();
         writeSemester(smtr);
+        tutupSemesterPanel();
+        updatePanel.run();;
         jTabbedPane1.setSelectedIndex(3);
-        updatePanel.run();
-
     }//GEN-LAST:event_Semester1Button1MouseClicked
 
     private void Semester1Button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button2MouseClicked
         smtr = "3";
-        tutupSemesterPanel();
         writeSemester(smtr);
+        tutupSemesterPanel();
+        updatePanel.run();;
         jTabbedPane1.setSelectedIndex(3);
-        updatePanel.run();
-
     }//GEN-LAST:event_Semester1Button2MouseClicked
 
     private void Semester1Button3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button3MouseClicked
         smtr = "4";
-        tutupSemesterPanel();
         writeSemester(smtr);
+        tutupSemesterPanel();
+        updatePanel.run();;
         jTabbedPane1.setSelectedIndex(3);
-        updatePanel.run();
-
     }//GEN-LAST:event_Semester1Button3MouseClicked
 
     private void Semester1Button4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button4MouseClicked
         smtr = "5";
-        tutupSemesterPanel();
         writeSemester(smtr);
+        tutupSemesterPanel();
+        updatePanel.run();;
         jTabbedPane1.setSelectedIndex(3);
-        updatePanel.run();
-
     }//GEN-LAST:event_Semester1Button4MouseClicked
 
     private void Semester1Button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1Button5MouseClicked
         smtr = "6";
-        tutupSemesterPanel();
         writeSemester(smtr);
+        tutupSemesterPanel();
+        updatePanel.run();;
         jTabbedPane1.setSelectedIndex(3);
-        updatePanel.run();
-
     }//GEN-LAST:event_Semester1Button5MouseClicked
 
     private void Semester1ButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Semester1ButtonMouseEntered
@@ -658,6 +729,8 @@ public class Dashboard1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel10MouseExited
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+
+        deletenim();
         System.exit(0);
     }//GEN-LAST:event_jLabel10MouseClicked
 
@@ -710,6 +783,7 @@ public class Dashboard1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel GuruName;
     private javax.swing.JPanel Semester1Button;
     private javax.swing.JPanel Semester1Button1;
     private javax.swing.JPanel Semester1Button2;

@@ -89,7 +89,7 @@ public class NavBar extends javax.swing.JPanel {
 
         roundPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        imageAvatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/RAPORTKU.png"))); // NOI18N
+        imageAvatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Profil.jpg"))); // NOI18N
 
         javax.swing.GroupLayout roundPanel1Layout = new javax.swing.GroupLayout(roundPanel1);
         roundPanel1.setLayout(roundPanel1Layout);
